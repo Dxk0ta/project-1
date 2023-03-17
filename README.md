@@ -1,8 +1,7 @@
 # The Dice Is Right
  Welcome to The Dice Is Right! You will take turns rolling the dice. Every time you roll, the number you roll will add to your scoreboard, you can choose to hold or roll again, but if your scoreboard gets above 21, you will bust and your score will go back to 0! The player that gets closest to 21 without busting will win that round. You have three lives, the winner will be declared by last man standing!
 
-Here's the frame work! https://app.diagrams.net/#G1OazeWrMRncIdAp9xM-V7dYXsKrE-kgHx
-Here is the link to the game! https://github.com/Dxk0ta/project-1.git
+Here is the link! https://github.com/Dxk0ta/project-1.git
 
 ## Seeing the process out
 I started thinking my game out from start to finish without touching a key. Once I had the idea in my head, I wanted to make it come to life! I wanted to use Canvas, but I also wanted to make sure I grasped what I've already learned before moving on to a new skill set. I am beyond excited to learn and implament it in the future though! 
@@ -20,13 +19,14 @@ First, I will need to start with the layout of my game. I need to put something 
 -I will set an array of images to roll through different sides of the dice
 -I will set the buttons up to respond with "starting new game" "roll dice" and "hold".
 -I will determine winners and losers based on rolls and score.
+-When player loses a turn, one of his men will get crossed out with a red X.
 
-# Stretch Goals
+### Stretch Goals
 -I LOVE styling, my biggest goal after finishing the project requirements and messing around with CSS, Javascript and draw.io as much as I can to implament as much beauty into the game as possible
 -I would also like to work on side projects such as displaying a message in the players "message bubble" telling players whos turn it is, and messages when players win or lose.
 -If I have any extra time to keep ajusting things I would also like to work on smoothing the game out.
 
-## Potential Road Blocks
+### Potential Road Blocks
 I get way to invested into what I'm doing to the point that I will spend hours trying to fix something before I delete it and write something else. This has been my biggest problem with learning how to code. My goal is to work on taking breaks to let my brain rest, and not being afraid to delete code and get a new prespective!
 
 ### Prerequasites 
@@ -41,4 +41,4 @@ The first thing I did was plan out what I invisioned the outcome to be. This sta
 
 ## Wireframe
 
-![Wireframe](https://app.diagrams.net/#G1OazeWrMRncIdAp9xM-V7dYXsKrE-kgHx)
+![wireframe](./prototype.img.png)
