@@ -11,20 +11,21 @@ Once I got to putting my ideas on the cumputer, I started with my wireframe and 
 First, I will need to start with the layout of my game. I need to put something on the computer to work off of. I started with the board because it was easier for me to think out what and how I wanted it to look like, and from there I could visually see everything I was going to need to create in html and give it some more life with CSS and Javascript. I will need to make sure my HTML, CSS, and Javascript are linked together before moving too far.
 
 -I will create the name of the game and my players.
--I will need to get the bones of my game writen down.. There will be score areas for each player, player names, current scoreboards, and all of my buttons written out in my HTML and then I will use CSS to help me style my game.
+-I will need to get the bones of the game writen down.. There will be score areas for each player, player names, current scoreboards, and all of my buttons written out in my HTML and then I will use CSS to help me style my game.
 -Once I have a basic outline of my game on the screen, I can start writing some Javascript and turning it into a game!
 -I would connect my HTML to my Javascript by using DOM Manipulation and in the end I would deploy it online using something like Heroku or Amazon Web Services.
--Turns will switch when each player has played their round and winner will be decided after one of the players wins 3 times. You win a round by getting closer to 21 than your oponent. If you roll above 21 you will bust and your score will be 0.
--I will set the current score and lives material
--I will set an array of images to roll through different sides of the dice
--I will set the buttons up to respond with "starting new game" "roll dice" and "hold".
--I will determine winners and losers based on rolls and score.
--When player loses a turn, one of his men will get crossed out with a red X.
+-Turns will switch when each player has played their round and winner will be decided after one of the players wins 3 times. You win a round by getting closer to 21 than your oponent. If you roll above 21 you will bust and your score will be 0. Unless your oponent also busts (would result in a tie), then this means you would lose the round.
+-set the current score and lives material
+-set an array of images to roll through different sides of the dice
+-set the buttons up to respond with "starting new game" "roll dice" and "hold".
+-determine winners and losers based on rolls and score.
+
 
 ### Stretch Goals
 -I LOVE styling, my biggest goal after finishing the project requirements and messing around with CSS, Javascript and draw.io as much as I can to implament as much beauty into the game as possible
 -I would also like to work on side projects such as displaying a message in the players "message bubble" telling players whos turn it is, and messages when players win or lose.
--If I have any extra time to keep ajusting things I would also like to work on smoothing the game out.
+-Naming each "life" and sending a message to the player (for example) "you killed pepe!"
+-When player loses a turn, one of his men will get crossed out with a red X.
 
 ### Potential Road Blocks
 I get way to invested into what I'm doing to the point that I will spend hours trying to fix something before I delete it and write something else. This has been my biggest problem with learning how to code. My goal is to work on taking breaks to let my brain rest, and not being afraid to delete code and get a new prespective!
