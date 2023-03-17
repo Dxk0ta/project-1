@@ -1,5 +1,5 @@
 # The Dice Is Right
- Welcome to The Dice Is Right! You will take turns rolling the dice. Every time you roll, the number you roll will add to that players scoreboard. The first player to get to 21 kills one of their oponents men! You have 3 lives, so roll wisely! 
+ Welcome to The Dice Is Right! You will take turns rolling the dice. Every time you roll, the number you roll will add to your scoreboard, you can choose to hold or roll again, but if your scoreboard gets above 21, you will bust and your score will go back to 0! The player that gets closest to 21 without busting will win that round. You have three lives, the winner will be declared by last man standing!
 
 Here's the frame work! https://app.diagrams.net/#G1OazeWrMRncIdAp9xM-V7dYXsKrE-kgHx
 Here is the link to the game! https://github.com/Dxk0ta/project-1.git
@@ -11,15 +11,15 @@ Once I got to putting my ideas on the cumputer, I started with my wireframe and 
 ## MVP Goals
 First, I will need to start with the layout of my game. I need to put something on the computer to work off of. I started with the board because it was easier for me to think out what and how I wanted it to look like, and from there I could visually see everything I was going to need to create in html and give it some more life with CSS and Javascript. I will need to make sure my HTML, CSS, and Javascript are linked together before moving too far.
 
--I will create the name of the game and my players
--I will need to get the bones of my game writen down.. There will be score areas for each player, player names, current scoreboards, and all of my buttons written out in my HTML and then I will use CSS to help me style my game
+-I will create the name of the game and my players.
+-I will need to get the bones of my game writen down.. There will be score areas for each player, player names, current scoreboards, and all of my buttons written out in my HTML and then I will use CSS to help me style my game.
 -Once I have a basic outline of my game on the screen, I can start writing some Javascript and turning it into a game!
 -I would connect my HTML to my Javascript by using DOM Manipulation and in the end I would deploy it online using something like Heroku or Amazon Web Services.
--Turns will switch when each player has played their round and winner will be decided once someone reaches 21 and the loser loses all of their lives.
+-Turns will switch when each player has played their round and winner will be decided after one of the players wins 3 times. You win a round by getting closer to 21 than your oponent. If you roll above 21 you will bust and your score will be 0.
 -I will set the current score and lives material
 -I will set an array of images to roll through different sides of the dice
--I will set the buttons up to respond with "starting new game" "roll dice" and "hold
--I will determine winners and losers based on rolls and score
+-I will set the buttons up to respond with "starting new game" "roll dice" and "hold".
+-I will determine winners and losers based on rolls and score.
 
 # Stretch Goals
 -I LOVE styling, my biggest goal after finishing the project requirements and messing around with CSS, Javascript and draw.io as much as I can to implament as much beauty into the game as possible
