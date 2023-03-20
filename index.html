@@ -1,34 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
-    <link rel="stylesheet" href="styles.css" />
-    <title>The Dice Is Right</title>
-</head>
-<body>
-    <main>
-        <section class="player1">
-            <h2 class="name" id="name-one">Player 1</h2>
-        <div class="current">
-            <p class="current-label">Current</p>
-        </div>
-        </section>
-        <section class="player2">
-            <h2 class="name" id="name-two">Player 2</h2>
-        <div class="current">
-            <p class="current-label">Current</p>
-        </div>
-        </section>
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+        <link rel="stylesheet" href="styles.css" />
+        <title>The Dice Is Right</title>
+    </head>
+    <body>
+        <main>
+            <section class="user user--0 user--active">
+                <div class="current">
+                    <p class="current-label">Current</p>
+                    <p class="current-score" id="current--0">0</p>
+                </div>
+                <h2 class="name" id="name--0">Player 1</h2>
+                <p class="score" id="score--0">43</p>
+            
+            </section>
 
-        <img src="dice-1.png" alt="dice" class="dice" />
-        <button class="btn btn--new"> New game</button>
-        <button class="btn btn--roll"> Roll Dice</button>
-        <button class="btn btn--hold"> Hold</button>
-    </main>
+            <section class="user user--1">
+                
+                <div class="current">
+                    <p class="current-label">Current</p>
+                    <p class="current-score" id="current--1">0</p>
+                </div>
+                <h2 class="name" id="name--1">Player 2</h2>
+                <p class="score" id="score--1">24</p>
+            </section>
 
-<script src="scripts.js"></script>
+            <img src="dice-1.png" alt="Playing dice" class="dice" />
 
-</body>
+            <button class="btn btn--new"> New game</button>
+
+            <button class="btn btn--roll"> Roll dice</button>
+
+            <button class="btn btn--hold"> Hold</button>
+        </main>
+
+        <script src="scripts.js"></script>
+    </body>
 </html>
