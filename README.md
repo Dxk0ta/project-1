@@ -57,3 +57,7 @@ I wanted to create a game that would give me the ability to better my Javascript
 (DAY ONE AND TWO)
 
 The first thing I did was plan out what I invisioned the outcome to be. This started in my head, then slowly worked its way to the computer using wireframe to make the blueprints.
+
+(DAY THREE AND FOUR)
+
+Started by creating the layout of the board and buttons in css, then did some basic styling. I continued to get the styling more like how I wanted and then started on some basic dice rolling and player switch functionalities. When doing this, I ran into a bug that took me a few hours to resolve. When I would roll the dice, the current score for player 2 would say NaN. I then realized I accidentally had a syntax error and when fixed the problem was resolved. Over the next couple days I plan on continuing to work on functionality, like the hold button and the new game button. I also want the 3 lives to pop up and the messages that display the current user's turn.
