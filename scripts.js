@@ -81,38 +81,43 @@ btnHold.addEventListener('click', function () {
         scores[activeUser];
         // check if the active users score is greater than or equal to 20
         // also check to see if the lives are = 0, if so..game over
-        if (scores[activeUser] > 21) {
+        if (scores[activeUser] >= 21) {
             // if so, the game is over
             playing = false;
             // hide dice element
             diceEl.classList.add('hidden');
+            // set score to now say the higher scoring player wins
+            document.getElementById(`score--${activeUser}`).textContent = 'Win!';
+            document
+            .querySelector(`.user--${activeUser}`)
+            .classList.add('user--winner');
+            switchUser();
             // set score to now say the lower scoring player loses
             // next I will work on making it so that the user closest to 21 without busting wins, and the loser has a message that displays "Bust"
             document.getElementById(`score--${activeUser}`).textContent = 'Bust!';
-            switchUser();
-            // set score to now say the higher scoring player wins
-            document.getElementById(`score--${activeUser}`).textContent = 'Win!';
-            if (document.getElementById(`score--${activeUser}`).textContent === 'Win!') {
-                document
+            document
+            .querySelector(`.user--${activeUser}`)
+            .classList.add('user--loser');
+            // // create loser variable
+            // let loser;
+            // // iterate through userElement
+            // for (let element of userEls) {
+            //     // check if the user does not have the class user--winner attached
+            //     if(!element.classList.contains('user--winner')) {
+            //         // if that is true, they are the loser
+            //         loser = element;
+            //     }
+            // }
+            // if (loser) {
+            //     // create loser class once game detects a loser
+            //     loser.classList.add('user--loser');
+            // }
+            // // check if the active user is user 0 or 1, then reassign that to the active variable
+            if (document
                 .querySelector(`.user--${activeUser}`)
-                .classList.add('user--winner');
-            } 
-            // create loser variable
-            let loser;
-            // iterate through userElement
-            for (let element of userEls) {
-                // check if the user does not have the class user--winner attached
-                if(!element.classList.contains('user--winner')) {
-                    // if that is true, they are the loser
-                    loser = element;
+                .classList.contains('user--loser')) {
+                    lifeTracker();
                 }
-            }
-            if (loser) {
-                // create loser class once game detects a loser
-                loser.classList.add('user--loser');
-                lifeTracker();
-            }
-            // check if the active user is user 0 or 1, then reassign that to the active variable
             active = activeUser == 1 ? 0 : 1;
             document
             .querySelector(`.user--${active}`)
@@ -131,6 +136,7 @@ btnNew.addEventListener('click', function () {
     document
     .querySelector(`.user--${activeUser}`)
     .classList.remove('user--winner');
+    switchUser();
     // remove the loser class 
     document
     .querySelector(`.user--${activeUser}`)
@@ -148,25 +154,34 @@ btnNew.addEventListener('click', function () {
 });
 
 const lifeTracker = function () {
-    // create life variable that starts at 3
-    // create active winner and loser variables
-    let activeWinner = document.querySelector('.user--winner');
-    let activeLoser = document.querySelector('.user--loser');
+    const user0Loser = user0El.classList.contains('user--loser')
+    const user1Loser = user1El.classList.contains('user--loser')
+    let counter = 3;
     let loss;
-    for (let element of userEls) {
-        loss = element;
+    for (let i = 0; i <= counter; i++) {
+        for (let element of userEls) {
+            loss = element;
+        }
     }
-    if (loss.classList.contains('user--0') && !activeWinner) {
+    if (user0Loser) {
         tracker.user0 -= 1
+        counter--;
         livesConEl.removeChild(livesConEl.lastChild);
+        console.log('tracker0    ', tracker)
     } else {
         tracker.user1 -= 1
+        counter--;
         livesConEl.removeChild(livesConEl.lastChild);
+        console.log('tracker1    ', tracker)
     }
-    console.log('traaackerrrr   ', tracker)
-}
+    // if (user1Loser) {
+    //     tracker.user1 -= 1
+    //     counter--;
+    //     livesConEl.removeChild(livesConEl.lastChild);
+    //     console.log('tracker1    ', tracker)
+    // }
 
-
+//livesConEl.removeChild(livesConEl.lastChild);
     // ACCOUNT FOR 3 LIVES EACH
     // WRITE FUNCTIONALITY THAT REDUCES LIVES 
     // MAKE CURRENT SCORE ONLY ABLE TO GO UP TO 21 OR "BUST" 
@@ -174,3 +189,4 @@ const lifeTracker = function () {
     // DECLARE A WINNER AND A LOSER
     // possibly put in messages that send back and forth
 
+};
