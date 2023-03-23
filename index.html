@@ -55,22 +55,22 @@
             <h3>Press the button below to learn how to play!</h3>
         </div>
 
-        <button type="button" class="modal-btn">Instructions</button>
+        <button type="button" id="open_modal">Instructions</button>
         
-       <div class="modal-container">
+       <div class="modal-container" id="modal_container">
         <div class="modal">
             <div class="modal-header">
                 <h2>How to play!</h2>
                 <i class="fa fa-close"></i>
             </div>
-            <div class="modal-content">
-                <img src="instructions.pgn" alt="" />
-                <p>
-                    The goal of this game is to roll 21 or as close to it as possible without going over. You will roll a number, and then choose if you want to risk it and roll again, or hold your number and end your turn. Be careful though! If you go over 21, you bust and automatically lose that round! Each player will have 3 lives and each round will determane who wins and loses a life. The winner will be determaned by the last man standing! Make sure to press the “next round" button after each time a player loses a life to continue the game. Once you have finish and a winner is declared, the “new round” button will turn into a “restart game” button. Gamble responsibly and have fun! Try not to kill Bob Barker!
+            <div class="modal-content" id="modal_container">
+                <img src="instructionsImg.png" alt="instuctions img" />
+                <p class="how-to">
+                    The goal of this game is to roll 21 or as close to it as possible without rolling over. You will roll a number, and then choose if you want to risk it and roll again, or hold your number and end your turn. Be careful though! If you roll over 21, you bust and automatically lose that round! Each player will have 3 lives and each round will determined who wins and loses a life. The winner of the game will be determaned by the last man standing! Make sure to press the “next round" button after each time a player loses a life to continue the game. Once you have finish and a winner is declared, the “new round” button will turn into a “restart game” button. Gamble responsibly and have fun! Try not to kill Bob Barker!
                 </p>
             </div>
             <div class="modal-footer">
-                <button type="button" class="btn-close">Close</button>
+                <button type="button" class="btn-close" id="close_modal">Close</button>
             </div>
         </div>
 

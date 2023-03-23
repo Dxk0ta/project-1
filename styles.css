@@ -193,7 +193,7 @@ display: none;
     justify-content: center;
 }
 
-.modal-btn {
+#open_modal {
     position: absolute;
     bottom: 0;
     text-align: center;
@@ -206,17 +206,33 @@ display: none;
 }
 
 .modal-container {
-    position: absolute;
-    bottom: 0;
-    text-align: center;
+    background-color: solid black;
+    position: fixed;
+    margin: auto 0;
+    height: 100vh;
+    width: 100vh;
+    display: flex;
     justify-content: center;
+    text-align: center;
+    min-height: fit-content;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.modal-container.show {
+    opacity: 1;
+    pointer-events: auto;
 }
 
 .modal {
     background-color: white;
-    width: 550px;
+    width: 700px;
+    height: 580px;
     max-width: 100%;
     border-radius: 05px;
+    align-content: center;
+    justify-content: center;
+    margin-top: 100px;
 }
 
 .modal-header {
@@ -228,12 +244,23 @@ display: none;
     border-top-right-radius: 05px;
     justify-content: space-between;
     align-items: center;
+    font-size: xx-large;
+}
+
+.module-header i{
+    cursor: pointer;
+}
+
+.how-to {
+    font-size: x-large;
+    line-height: 30px;
 }
 
 .modal-content img {
     display:block;
     width: 25%;
     margin: 10px auto;
+
 }
 
 .modal-content {
@@ -245,8 +272,25 @@ display: none;
 .modal-footer {
     border-top: 1px solid white;
     padding: 20px 15px;
+    bottom: 0;
 }
 
-.modal-footer .btn-closed {
-    margin-bottom: 8px;
+.modal-footer .btn-close {
+    display: block;
+    margin-left: auto;
+    margin-bottom: auto;
+    background: transparent;
+    color: red;
+    outline: 1px solid rgb(128, 0, 94);
+    padding: 10px 10px;
+    cursor: pointer;
+    transition: all 0.3s;
+    border-radius: 04px;
+    
+}
+
+.modal-footer .btn-close:hover {
+    background: rgb(128, 0, 94);
+    color: white;
+    transition: 0.3s;
 }

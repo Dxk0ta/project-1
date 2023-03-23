@@ -251,21 +251,16 @@ const newGame = function () {
     btnNew.textContent = 'New round';
 };
 
-const modals = document.querySelectorAll('[data-modal]');
+let open_modal = document.getElementById('open_modal');
+let modal_container = document.getElementById('modal_container');
+let close_modal = document.getElementById('close_modal');
 
-modals.forEach(function (trigger) {
-  trigger.addEventListener('click', function (event) {
-    event.preventDefault();
-    const modal = document.getElementById(trigger.dataset.modal);
-    modal.classList.add('open');
-    const exits = modal.querySelectorAll('.modal-exit');
-    exits.forEach(function (exit) {
-      exit.addEventListener('click', function (event) {
-        event.preventDefault();
-        modal.classList.remove('open');
-      });
-    });
-  });
+open_modal.addEventListener("click", function() {
+    modal_container.classList.add('show');
+});
+
+close_modal.addEventListener("click", function() {
+    modal_container.classList.remove('show');
 });
 // create a function where the computer advises the player on what steps to take next
 
