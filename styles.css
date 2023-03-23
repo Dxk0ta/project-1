@@ -15,7 +15,7 @@ font-family: 'Farsan';
 font-weight: 400;
 height: 100vh;
 color: #333;
-background-image: linear-gradient(to top left, #000000 0%, #c6c5c5 100%);
+background-image: linear-gradient(to top left, #000000 0%, #337b33 100%);
 display: flex;
 align-items: center;
 justify-content: center;
@@ -61,7 +61,7 @@ margin-bottom: auto;
 }
 
 .user--active {
-background-color: rgba(255, 255, 255, 0.4);
+background-color: rgba(9, 203, 48, 0.4);
 }
 
 .user--active .name {

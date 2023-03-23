@@ -44,6 +44,7 @@ const switchUser = function () {
     activeUser = activeUser == 0 ? 1 : 0;
     // switch between user 0 and user 1 being active
     user0El.classList.toggle('user--active');
+    console.log('active: ', activeUser);
     user1El.classList.toggle('user--active');
     };
     // create an event listener that makes the button "roll" when clicked
@@ -57,15 +58,11 @@ const switchUser = function () {
     console.log(dice);
     // make the dice img update to whatever is rolled
     diceEl.src = `dice-${dice}.png`;
-    if (dice !== 1) {
-        // add dice amt to current score
-    currentscore += dice;
-    // set text content on each user to accurately represent their current score
-    document.getElementById(`current--${activeUser}`).textContent =
-    currentscore;
-    } else {
-    switchUser();
-    }
+     // add dice amt to current score
+     currentscore += dice;
+     // set text content on each user to accurately represent their current score
+     document.getElementById(`current--${activeUser}`).textContent =
+     currentscore;
     }
     });
 
@@ -95,8 +92,6 @@ btnHold.addEventListener('click', function () {
             document
             .querySelector(`.user--${active}`)
             .classList.add('user--active');
-        } else {
-            switchUser();
         }
     }
 });
