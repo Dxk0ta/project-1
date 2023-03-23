@@ -98,11 +98,13 @@ btnHold.addEventListener('click', function () {
         } else {
             switchUser();
         }
-        }
-    });
-    
-    const determineWinner = function() {
-        if (scores[0] > 21) {
+    }
+});
+
+const determineWinner = function() {
+    // the following is the logic for our game..
+    // if user 0's score is greater than 21, user 1 wins
+    if (scores[0] > 21) {
             document.getElementById(`score--1`).textContent = 'Win!';
             document
             .querySelector(`.user--1`)
@@ -111,7 +113,11 @@ btnHold.addEventListener('click', function () {
             document
             .querySelector(`.user--0`)
             .classList.add('user--loser');
+            // remove one of the life images
             livesConEl0.removeChild(livesConEl0.lastElementChild);
+            // decrement the user 0's lives on the track obj
+            tracker[0] -= 1
+            // if user 1's score is greater than 21, user 0 wins
         } else if (scores[1] > 21) {
             document.getElementById(`score--0`).textContent = 'Win!';
             document
@@ -121,7 +127,11 @@ btnHold.addEventListener('click', function () {
             document
             .querySelector(`.user--1`)
             .classList.add('user--loser');
+            // remove one of the life images
             livesConEl1.removeChild(livesConEl1.lastElementChild);
+            // decrement the user 0's lives on the track obj
+            tracker[1] -= 1
+            // if user 0's score is greater than user 1 and less or equal to 21, user 0 wins
         } else if ((scores[0] > scores[1]) && scores[0] <= 21) {
             // set score to now say the player who didnt bust wins
             document.getElementById(`score--0`).textContent = 'Win!';
@@ -132,7 +142,11 @@ btnHold.addEventListener('click', function () {
             document
             .querySelector(`.user--1`)
             .classList.add('user--loser');
+            // remove one of the life images
             livesConEl1.removeChild(livesConEl1.lastElementChild);
+            // decrement the user 0's lives on the track obj
+            tracker[1] -= 1
+            // if user 0's score is greater than user 1 and less or equal to 21, user 0 wins
         } else if ((scores[1] > scores[0]) && scores[1] <= 21) {
             document.getElementById(`score--1`).textContent = 'Win!';
             document
@@ -142,12 +156,16 @@ btnHold.addEventListener('click', function () {
             document
             .querySelector(`.user--0`)
             .classList.add('user--loser');
+            // remove one of the life images
             livesConEl0.removeChild(livesConEl0.lastElementChild);
-        } 
-        // else {
-        //     document.getElementById(`score--0`).textContent = 'Tie!';
-        //     document.getElementById(`score--1`).textContent = 'Tie!';
-        // }
+            // decrement the user 0's lives on the track obj
+            tracker[0] -= 1
+            // account for tie
+        } else {
+            document.getElementById(`score--0`).textContent = 'Tie!';
+            document.getElementById(`score--1`).textContent = 'Tie!';
+        }
+        // if the user has no more lives, new game button switches to reset
         if (tracker[0] === 0 || tracker[1] === 0) {
             btnNew.textContent = 'Reset Game';
             btnNew.addEventListener('click', newGame) 
