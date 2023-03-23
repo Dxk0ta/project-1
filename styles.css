@@ -183,4 +183,25 @@ display: none;
     height: 50px;
 }
 
+.instructions {
+    position: absolute;
+    bottom: 0;
+    padding-bottom: 55px;
+    font-size: x-large;
+    color: rgb(225, 217, 217);
+    text-align: center;
+    justify-content: center;
+}
 
+.info-btn {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    justify-content: center;
+    margin-right: 100px;
+    margin-bottom: 10px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
