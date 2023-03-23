@@ -69,3 +69,20 @@ Today I worked on first trying to get 3 stick figures to pop up on each player's
 (DAY SIX)
 
 I started the day working on debugging the life bar and getting it to run the way I intended. This took a few hours. I was able to solve bugs where the active user was incorrectly toggling. I also solved a bug where it was switching users when I didn't want it to. I was able to do that by realizing I was invoking the function redundantly. Also, I worked on getting the lives to visibly decrement when a round is lost. This was probably the longest bug I worked on, and it was because I tried to use .lastChild instead of .lastElementChild. I also worked on styling my game better so it was more obvious who the active player was. I made it so after all lives are lost, the 'New Round' button gets changed to a 'New Game' button that resets the lives and scores. I fixed the logic of the game to more accurately represent the game of 21 and it is working how I wanted it to. 
+
+(DAY SEVEN)
+
+Built the instructions modal and finished cleaning the game up!
+
+## Post Project
+---
+While this project has definitely been one of the more rewarding things I have built in my life, there are a few things I would like to look back on. One of the most important things I learned was that it is better to change a couple things then check on my page then to change a lot and risk having a bug that I can no longer figure out. I also learned the importance of console logging to determine where a bug is and if the functions I am implementing are doing what I want them to. All in all, I am really happy with how my project turned out but wish I had a little more time to make the syntax and methods I used more consistent with one another.
+
+## Sources Used
+---
+https://www.w3schools.com/jsref/jsref_foreach.asp
+https://developer.mozilla.org/en-US/docs/Web/API/Element/lastElementChild
+https://pixlr.com/x/
+https://www.w3schools.com/howto/howto_css_modals.asp
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
