@@ -193,15 +193,60 @@ display: none;
     justify-content: center;
 }
 
-.info-btn {
+.modal-btn {
     position: absolute;
     bottom: 0;
     text-align: center;
     justify-content: center;
-    margin-right: 100px;
     margin-bottom: 10px;
     padding-top: 5px;
     padding-bottom: 5px;
     padding-right: 15px;
     padding-left: 15px;
+}
+
+.modal-container {
+    position: absolute;
+    bottom: 0;
+    text-align: center;
+    justify-content: center;
+}
+
+.modal {
+    background-color: white;
+    width: 550px;
+    max-width: 100%;
+    border-radius: 05px;
+}
+
+.modal-header {
+    display: flex;
+    background: #356c97;
+    color: red;
+    padding: 20px 15px;
+    border-top-left-radius: 05px;
+    border-top-right-radius: 05px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.modal-content img {
+    display:block;
+    width: 25%;
+    margin: 10px auto;
+}
+
+.modal-content {
+    padding: 20px 15px;
+    line-height: 2rem;
+    text-align: justify;
+}
+
+.modal-footer {
+    border-top: 1px solid white;
+    padding: 20px 15px;
+}
+
+.modal-footer .btn-closed {
+    margin-bottom: 8px;
 }
