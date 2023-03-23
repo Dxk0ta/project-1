@@ -249,7 +249,9 @@ const newGame = function () {
     document.getElementById('score--0').textContent = 0;
     document.getElementById('score--1').textContent = 0;
     btnNew.textContent = 'New round';
-}
+};
+// create a function where the computer advises the player on what steps to take next
+
 
 //livesConEl.removeChild(livesConEl.lastChild);
     // ACCOUNT FOR 3 LIVES EACH

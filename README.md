@@ -68,4 +68,4 @@ Today I worked on first trying to get 3 stick figures to pop up on each player's
 
 (DAY SIX)
 
-I started the day working on debugging the life bar and getting it to run the way I intended. This took a few hours 
+I started the day working on debugging the life bar and getting it to run the way I intended. This took a few hours. I was able to solve bugs where the active user was incorrectly toggling. I also solved a bug where it was switching users when I didn't want it to. I was able to do that by realizing I was invoking the function redundantly. Also, I worked on getting the lives to visibly decrement when a round is lost. This was probably the longest bug I worked on, and it was because I tried to use .lastChild instead of .lastElementChild. I also worked on styling my game better so it was more obvious who the active player was. I made it so after all lives are lost, the 'New Round' button gets changed to a 'New Game' button that resets the lives and scores. I fixed the logic of the game to more accurately represent the game of 21 and it is working how I wanted it to. 
