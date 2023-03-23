@@ -21,6 +21,14 @@ align-items: center;
 justify-content: center;
 }
 
+.title {
+    position: absolute;
+    top: 0;
+    padding-top: 30px;
+    font-size: xx-large;
+    color: rgb(225, 217, 217);
+}
+
 main {
 position: relative;
 width: 100rem;
