@@ -8,7 +8,8 @@ const diceEl = document.querySelector('.dice');
 const btnNew = document.querySelector('.btn--new');
 const btnRoll = document.querySelector('.btn--roll');
 const btnHold = document.querySelector('.btn--hold');
-const livesConEl = document.querySelector('.livesContainer');
+const livesConEl0 = document.querySelector('.livesContainer0');
+const livesConEl1 = document.querySelector('.livesContainer1');
 const livesEl = document.querySelector('.lives');
 const userEls = document.getElementsByClassName('user');
 // setting the text content to 0 makes js automatically convert to string
@@ -25,10 +26,11 @@ let activeUser = 0;
 // set playing to true to show game is active
 let playing = true;
 // create an object that keeps track of lives
-const tracker = {
-    user0: 3,
-    user1: 3
+let tracker = {
+    0: 3,
+    1: 3
 };
+let loser;
 // MAKE THE DICE ROLL 
 // SWITCH TURNS BETWEEN USERS
 
@@ -98,26 +100,8 @@ btnHold.addEventListener('click', function () {
             document
             .querySelector(`.user--${activeUser}`)
             .classList.add('user--loser');
-            // // create loser variable
-            // let loser;
-            // // iterate through userElement
-            // for (let element of userEls) {
-            //     // check if the user does not have the class user--winner attached
-            //     if(!element.classList.contains('user--winner')) {
-            //         // if that is true, they are the loser
-            //         loser = element;
-            //     }
-            // }
-            // if (loser) {
-            //     // create loser class once game detects a loser
-            //     loser.classList.add('user--loser');
-            // }
+            lifeTracker();
             // // check if the active user is user 0 or 1, then reassign that to the active variable
-            if (document
-                .querySelector(`.user--${activeUser}`)
-                .classList.contains('user--loser')) {
-                    lifeTracker();
-                }
             active = activeUser == 1 ? 0 : 1;
             document
             .querySelector(`.user--${active}`)
@@ -129,58 +113,98 @@ btnHold.addEventListener('click', function () {
     });
     
     // NEW GAME BUTTON
-btnNew.addEventListener('click', function () {
-    // when game is currently being played
-    playing = true;
-    // remove the winner class 
-    document
-    .querySelector(`.user--${activeUser}`)
-    .classList.remove('user--winner');
-    switchUser();
-    // remove the loser class 
-    document
-    .querySelector(`.user--${activeUser}`)
-    .classList.remove('user--loser');
-    switchUser();
-    // reset active user to user 0 so theyd be the first to go again
-    activeUser = 0;
-    document.querySelector('.user--0').classList.add('user--active');
-    document.querySelector('.user--1').classList.remove('user--active');
-    // reset the scores to 0
+    const newRound = function() {
+        // when game is currently being played
+        playing = true;
+        // remove the winner class 
+        document
+        .querySelector(`.user--${activeUser}`)
+        .classList.remove('user--winner');
+        switchUser();
+        // remove the loser class 
+        document
+        .querySelector(`.user--${activeUser}`)
+        .classList.remove('user--loser');
+        switchUser();
+        // reset active user to user 0 so theyd be the first to go again
+        activeUser = 0;
+        document.querySelector('.user--0').classList.add('user--active');
+        document.querySelector('.user--1').classList.remove('user--active');
+        // reset the scores to 0
+        scores[0] = 0;
+        scores[1] = 0;
+        document.getElementById('score--0').textContent = 0;
+        document.getElementById('score--1').textContent = 0;
+    };
+    btnNew.addEventListener('click', newRound) 
+
+const newGame = function () {
+    const resetLife1 = document.createElement('img');
+    resetLife1.src = 'individualLife.png';
+    resetLife1.classList.add('lives');
+    const resetLife2 = document.createElement('img');
+    resetLife2.src = 'individualLife.png';
+    resetLife2.classList.add('lives');
+    const resetLife3 = document.createElement('img');
+    resetLife3.src = 'individualLife.png';
+    resetLife3.classList.add('lives');
+    // check how many lives they have and add live images accordingly
+    console.log('container0 ::  ', livesConEl0)
+    console.log('container1 ::  ', livesConEl1)
+    console.log('trackerNewGame :: ', tracker)
+    if (tracker[0] === 0) {
+        livesConEl0.appendChild(resetLife1);
+        livesConEl0.appendChild(resetLife2);
+        livesConEl0.appendChild(resetLife3);
+    } else if (tracker[0] === 1) {
+        livesConEl0.appendChild(resetLife1);
+        livesConEl0.appendChild(resetLife2);
+    } else if (tracker[0] === 2) {
+        livesConEl0.appendChild(resetLife1);
+    } 
+    if (tracker[1] === 0) {
+        livesConEl1.appendChild(resetLife1);
+        livesConEl1.appendChild(resetLife2);
+        livesConEl1.appendChild(resetLife3);
+    } else if (tracker[1] === 1) {
+        livesConEl1.appendChild(resetLife1);
+        livesConEl1.appendChild(resetLife2);
+    } else if (tracker[1] === 2) {
+        livesConEl1.appendChild(resetLife1);
+    }
+    // reset tracker to start back at 3 lives
+    tracker = {
+        0: 3,
+        1: 3
+    };
+    // reset scores
     scores[0] = 0;
     scores[1] = 0;
     document.getElementById('score--0').textContent = 0;
     document.getElementById('score--1').textContent = 0;
-});
+    btnNew.textContent = 'New round';
+}
 
 const lifeTracker = function () {
-    const user0Loser = user0El.classList.contains('user--loser')
-    const user1Loser = user1El.classList.contains('user--loser')
-    let counter = 3;
-    let loss;
-    for (let i = 0; i <= counter; i++) {
-        for (let element of userEls) {
-            loss = element;
-        }
-    }
-    if (user0Loser) {
-        tracker.user0 -= 1
-        counter--;
-        livesConEl.removeChild(livesConEl.lastChild);
-        console.log('tracker0    ', tracker)
+    // create loser variable
+    let loser;
+    if (scores[activeUser] >= 21) {
+        loser = activeUser === 1 ? 0 : 1
+        tracker[activeUser] -= 1
     } else {
-        tracker.user1 -= 1
-        counter--;
-        livesConEl.removeChild(livesConEl.lastChild);
-        console.log('tracker1    ', tracker)
+        loser = activeUser
+        tracker[activeUser] -= 1
     }
-    // if (user1Loser) {
-    //     tracker.user1 -= 1
-    //     counter--;
-    //     livesConEl.removeChild(livesConEl.lastChild);
-    //     console.log('tracker1    ', tracker)
-    // }
-
+    if (loser === 1) {
+        livesConEl1.removeChild(livesConEl1.lastElementChild);
+    } else {
+        livesConEl0.removeChild(livesConEl0.lastElementChild);
+    }
+    if (tracker[0] === 0 || tracker[1] === 0) {
+        btnNew.textContent = 'Reset Game';
+        btnNew.addEventListener('click', newGame) 
+    }
+};
 //livesConEl.removeChild(livesConEl.lastChild);
     // ACCOUNT FOR 3 LIVES EACH
     // WRITE FUNCTIONALITY THAT REDUCES LIVES 
@@ -188,5 +212,3 @@ const lifeTracker = function () {
     // AND SWITCHES TURNS
     // DECLARE A WINNER AND A LOSER
     // possibly put in messages that send back and forth
-
-};

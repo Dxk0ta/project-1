@@ -64,3 +64,8 @@ Started by creating the layout of the board and buttons in css, then did some ba
 
 (DAY FIVE)
 
+Today I worked on first trying to get 3 stick figures to pop up on each player's side. Then I spent most of the day trying to make the lives disappear when a round is lost. At first, I was running into an issue where it would add the class "user--winner" onto both the user's sections. I was able to resolve this by taking away an unnecessary conditional statement I had written. I was able to create a tracker object where each user's lives are going down in the console, and tomorrow I plan on making it so as the lives go down the images disappear as well. I was also able to change some of the logic to more accurately represent 21, and so now whichever player goes above 21 first loses. I still have to make the logic more accurate to the game but my main focus is to get the whole game working properly by tomorrow and I hope to do this with a few slight bug fixes. Right now, it says both users are active when it should only be one. Also, player 1 is the only one that loses lives and it is not happening when it is supposed to. I hope to fix these issues tomorrow and get the game up and running so I can deploy it by Thursday!
+
+(DAY SIX)
+
+I started the day working on debugging the life bar and getting it to run the way I intended. This took a few hours 
