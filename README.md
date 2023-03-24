@@ -1,11 +1,11 @@
 # The Dice Is Right
- Welcome to my very first deployed project "The Dice Is Right"! This game is inspired by the well known card game Blackjack. It is a two player game with a life bar winning system. Play with a friend (or enemy!) and roll your way into some fun! 
+ Welcome to my very first deployed project "The Dice Is Right"! This game is inspired by the well known card game Blackjack. It is a two player game with a life bar winning system. Play with a friend (or enemy) and roll your way into some fun! 
 
 Here is the link! https://dxk0ta.github.io/project-1/
 
 ## Getting Started
 ---
-I wanted to create a game that would give me the ability to better my Javascript skills. This game is based on the well known card game "Blackjack" but instead of cards we will be using dice! 
+I wanted to create a game that would give me the ability to better my Javascript skills. This game is based on the well known card game "Blackjack" but instead of cards we will be using dice! My first step will be to build a wireframe for my game.
 
 ---
 
@@ -23,10 +23,9 @@ I wanted to create a game that would give me the ability to better my Javascript
 ---
 * I love styling, my biggest goal after finishing the project requirements and messing around with CSS, Javascript and draw.io as much as I can to implament as much beauty into the game as possible
 * Work on side projects such as displaying a message in the players "message bubble" telling players whos turn it is, and messages when players win or lose.
-* Naming each "life" and sending a message to the player (for example) "you killed pepe!"
+* Naming each "life" and sending a message to the player (for example) "you killed Pepe!"
 * When player loses a turn, one of his men will get crossed out with a red X.
 * I may mess around and put in an input section for each player to type there name in and fill the "Player one" "Player two" text
-* I would really like to get AI's involved as well
 
 ---
 
@@ -72,7 +71,7 @@ I started the day working on debugging the life bar and getting it to run the wa
 
 (DAY SEVEN)
 
-Built the instructions modal and finished cleaning the game up!
+Built the instructions modal and finished cleaning the game up. Game is now deployed and will be presented tomorrow!
 
 ## Post Project
 ---
@@ -80,9 +79,9 @@ While this project has definitely been one of the more rewarding things I have b
 
 ## Sources Used
 ---
-https://www.w3schools.com/jsref/jsref_foreach.asp
-https://developer.mozilla.org/en-US/docs/Web/API/Element/lastElementChild
-https://pixlr.com/x/
-https://www.w3schools.com/howto/howto_css_modals.asp
-https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
-https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+*https://www.w3schools.com/jsref/jsref_foreach.asp
+*https://developer.mozilla.org/en-US/docs/Web/API/Element/lastElementChild
+*https://pixlr.com/x/
+*https://www.w3schools.com/howto/howto_css_modals.asp
+*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+*https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
