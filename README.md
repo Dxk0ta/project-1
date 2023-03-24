@@ -79,9 +79,9 @@ While this project has definitely been one of the more rewarding things I have b
 
 ## Sources Used
 ---
-*https://www.w3schools.com/jsref/jsref_foreach.asp
-*https://developer.mozilla.org/en-US/docs/Web/API/Element/lastElementChild
-*https://pixlr.com/x/
-*https://www.w3schools.com/howto/howto_css_modals.asp
-*https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
-*https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
+* https://www.w3schools.com/jsref/jsref_foreach.asp
+* https://developer.mozilla.org/en-US/docs/Web/API/Element/lastElementChild
+* https://pixlr.com/x/
+* https://www.w3schools.com/howto/howto_css_modals.asp
+* https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Conditional_Operator
+* https://developer.mozilla.org/en-US/docs/Web/API/Node/appendChild
