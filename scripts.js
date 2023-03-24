@@ -161,8 +161,16 @@ const determineWinner = function() {
             document.getElementById(`score--1`).textContent = 'Tie!';
         }
         // if the user has no more lives, new game button switches to reset
-        if (tracker[0] === 0 || tracker[1] === 0) {
+        if (tracker[0] === 0) {
             btnNew.textContent = 'Reset Game';
+            document.getElementById('score--0').textContent = 'Better luck next time!';
+            document.getElementById('score--1').textContent = 'Champion!';
+            btnNew.addEventListener('click', newGame) 
+        }
+        if (tracker[1] === 0) {
+            btnNew.textContent = 'Reset Game';
+            document.getElementById('score--1').textContent = 'Better luck next time!';
+            document.getElementById('score--0').textContent = 'Champion!';
             btnNew.addEventListener('click', newGame) 
         }
     }
