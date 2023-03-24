@@ -1,11 +1,11 @@
 # The Dice Is Right
- Welcome to The Dice Is Right! You will take turns rolling the dice. Every time you roll, the number you roll will add to your scoreboard, you can choose to hold your scoreboard number and end your turn, or roll again. Be careful though! If your scoreboard gets above 21, you will bust and your score will go back to 0! The player that gets closest to 21 without busting will win that round. You have three lives, the winner will be declared by last man standing!
+ Welcome to my very first deployed project "The Dice Is Right"! This game is inspired by the well known card game Blackjack. It is a two player game with a life bar winning system. Play with a friend (or enemy!) and roll your way into some fun! 
 
-Here is the link! https://github.com/Dxk0ta/project-1.git
+Here is the link! https://dxk0ta.github.io/project-1/
 
 ## Getting Started
 ---
-I wanted to create a game that would give me the ability to better my Javascript skills! This game is based on the well known card game "21" but instead of cards we will be using dice!
+I wanted to create a game that would give me the ability to better my Javascript skills. This game is based on the well known card game "Blackjack" but instead of cards we will be using dice! 
 
 ---
 
@@ -76,7 +76,7 @@ Built the instructions modal and finished cleaning the game up!
 
 ## Post Project
 ---
-While this project has definitely been one of the more rewarding things I have built in my life, there are a few things I would like to look back on. One of the most important things I learned was that it is better to change a couple things then check on my page then to change a lot and risk having a bug that I can no longer figure out. I also learned the importance of console logging to determine where a bug is and if the functions I am implementing are doing what I want them to. All in all, I am really happy with how my project turned out but wish I had a little more time to make the syntax and methods I used more consistent with one another.
+While this project has definitely been one of the more rewarding things I have built in my life, there are a few things I would like to look back on. One of the most important things I learned was that it is better to change a couple things then check on my page then to change a lot and risk having a bug that I can no longer figure out. I also learned the importance of console logging to determine where a bug is and if the functions I am implementing are doing what I want them to. I also had strech goals that I'm bummed where not met. I wanted to create AI messsages that sent back and forth giving players advice on what to do next. My time management with styling, then breaking functions with the styling, and then fixing and styling again prevented me from having more time to accomplish these goals. In the future, I think it would be best to get bare minimum styling, and style as I write javascript so that I can step by set fix a bug before I'm too far into the code. I am really happy with how my project turned out but wish I had a little more time to make the syntax and methods I used more consistent with one another. 
 
 ## Sources Used
 ---

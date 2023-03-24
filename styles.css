@@ -4,12 +4,10 @@ margin: 0;
 padding: 0;
 box-sizing: inherit;
 }
-
 html {
 font-size: 62.5%;
 box-sizing: border-box;
 }
-
 body {
 font-family: 'Farsan';
 font-weight: 400;
@@ -20,7 +18,6 @@ display: flex;
 align-items: center;
 justify-content: center;
 }
-
 .title {
     position: absolute;
     top: 0;
@@ -28,7 +25,6 @@ justify-content: center;
     font-size: xx-large;
     color: rgb(225, 217, 217);
 }
-
 main {
 position: relative;
 width: 100rem;
@@ -41,7 +37,6 @@ border-radius: 9px;
 overflow: hidden;
 display: flex;
 }
-
 .user {
 flex: 50%;
 padding: 9rem;
@@ -50,7 +45,6 @@ flex-direction: column;
 align-items: center;
 transition: all 0.75s;
 }
-
 .name {
 position: relative;
 font-size: 4rem;
@@ -60,30 +54,24 @@ word-spacing: 2px;
 font-weight: 300;
 margin-bottom: 1rem;
 }
-
 .score {
 font-size: 8rem;
 font-weight: 300;
 color: #302a2c;
 margin-bottom: auto;
 }
-
 .user--active {
 background-color: rgba(19, 191, 65, 0.79);
 }
-
 .user--active .name {
 font-weight: 700;
 }
-
 .user--active .score {
 font-weight: 400;
 }
-
 .user--active .current {
 opacity: 1;
 }
-
 .current {
 background-color: #302a2c;
 opacity: 0.8;
@@ -94,18 +82,15 @@ padding: 2rem;
 text-align: center;
 transition: all 0.75s;
 }
-
 .current-label {
 text-transform: uppercase;
 margin-bottom: 1rem;
 font-size: 1.7rem;
 color: #ddd;
 }
-
 .current-score {
 font-size: 3.5rem;
 }
-
 .btn {
 position: absolute;
 left: 50%;
@@ -126,28 +111,22 @@ padding: 0.7rem 2.5rem;
 border-radius: 50rem;
 box-shadow: 0 1.75rem 3.5rem rgba(0, 0, 0, 0.1);
 }
-
 .btn--new {
 top: 4rem;
 }
-
 .btn--roll {
 top: 39.3rem;
 }
-
 .btn--hold {
 top: 46.1rem;
 }
-
 .btn:active {
 transform: translate(-50%, 3px);
 box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.15);
 }
-
 .btn:focus {
 outline: none;
 }
-
 .dice {
 position: absolute;
 left: 50%;
@@ -156,33 +135,26 @@ transform: translateX(-50%);
 height: 10rem;
 box-shadow: 0 2rem 5rem rgba(0, 0, 0, 0.2);
 }
-
 .player--winner {
 background-color: #2f2f2f;
 }
-
 .player--winner .name {
 font-weight: 700;
 color: #356c97;
 }
-
 .hidden {
 display: none;
 }
-
 .livesContainer0 {
     display: flex;
 }
-
 .livesContainer1 {
     display: flex;
 }
-
 .lives {
     width: 100px;
     height: 120px;
 }
-
 .instructions {
     position: absolute;
     bottom: 0;
@@ -192,7 +164,6 @@ display: none;
     text-align: center;
     justify-content: center;
 }
-
 #open_modal {
     position: absolute;
     bottom: 0;
@@ -204,7 +175,6 @@ display: none;
     padding-right: 15px;
     padding-left: 15px;
 }
-
 .modal-container {
     background-color: solid black;
     position: fixed;
@@ -218,15 +188,14 @@ display: none;
     opacity: 0;
     pointer-events: none;
 }
-
 .modal-container.show {
     opacity: 1;
     pointer-events: auto;
 }
-
 .modal {
     background-color: white;
     width: 700px;
+    height: 580px;
     height: 610px;
     max-width: 100%;
     border-radius: 05px;
@@ -234,7 +203,6 @@ display: none;
     justify-content: center;
     margin-top: 100px;
 }
-
 .modal-header {
     display: flex;
     background: #356c97;
@@ -246,51 +214,22 @@ display: none;
     align-items: center;
     font-size: xx-large;
 }
-
 .module-header i{
     cursor: pointer;
 }
-
 .how-to {
     font-size: x-large;
     line-height: 30px;
 }
-
 .modal-content img {
     display:block;
     width: 25%;
     margin: 10px auto;
-
 }
-
 .modal-content {
     padding: 20px 15px;
     line-height: 2rem;
     text-align: justify;
 }
-
 .modal-footer {
     border-top: 1px solid white;
-    padding: 20px 15px;
-    bottom: 0;
-}
-
-.modal-footer .btn-close {
-    display: block;
-    margin-left: auto;
-    margin-bottom: auto;
-    background: transparent;
-    color: red;
-    outline: 1px solid rgb(128, 0, 94);
-    padding: 10px 10px;
-    cursor: pointer;
-    transition: all 0.3s;
-    border-radius: 04px;
-    
-}
-
-.modal-footer .btn-close:hover {
-    background: rgb(128, 0, 94);
-    color: white;
-    transition: 0.3s;
-}
